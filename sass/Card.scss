@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+$color-white: #fff;
+$color-light-gray: #969FAD;
+$color-medium-gray: #7C8798;
+$color-orange: #FC7614;
+$color-dark-blue: #262E38;
+$color-very-dark-blue: #131518;
+
+
+html {
+    font-size: 62.5%;
+}
+
+.Card {
+    width: 32.7rem;
+    height: 36rem;
+    box-sizing: border-box;
+    background: radial-gradient(hsl(215, 20, 17), hsl(215, 24, 12));
+    font-family: "Overpass", sans-serif;
+    padding: 2.25rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    @media only screen and (min-width:900px) {
+        width: 41rem;
+        height: 41rem;
+    }
+
+    &__icon-holder {
+        height: 4rem;
+        width: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-dark-blue;
+        border-radius: 50%;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 2.4rem;
+        color: $color-white;
+        text-align: left;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        color: $color-light-gray;
+        margin-bottom: 2.5rem;
+        text-align: left;
+    }
+
+    &__img {
+        width: 44%;
+        margin: 2rem auto;
+        display: block;
+    }
+
+    &__rating-submitted {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        color: $color-orange;
+        background-color: $color-dark-blue;
+        border-radius: 10rem;
+        text-align: center;
+        width: 16.8rem;
+        margin: 3rem auto;
+    }
+}
+
+.rating-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form {
+
+    &__input[type="radio"] {
+        opacity: 0;
+        width: 0;
+        display: none;
+    }
+
+    &__input[type="radio"]:checked+&__label {
+        color: $color-white;
+        background-color: $color-light-gray
+    }
+
+    &__input[type="radio"]:focus+&__label {
+        color: $color-white;
+        background-color: $color-light-gray
+    }
+
+    &__label {
+        height: 4.2rem;
+        width: 4.2rem;
+        background-color: $color-dark-blue;
+        color: $color-medium-gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-weight: 700;
+        font-size: 1.4rem;
+
+        transition: all .4s;
+
+        &:hover {
+            background-color: $color-orange;
+            color: $color-white;
+            cursor: pointer;
+        }
+    }
+
+    &__submit {
+        margin: 2.5rem 0 1.5rem;
+        flex: 0 0 100%;
+        border: none;
+        border-radius: 10rem;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-family: inherit;
+        font-weight: 700;
+        letter-spacing: 1.87px;
+        color: $color-white;
+        background-color: $color-orange;
+        transition: all .3s;
+
+        &:hover {
+            color: $color-orange;
+            background-color: $color-white;
+            cursor: pointer;
+            transform: translateY(-3px);
+        }
+
+        &:active {
+            transform: translatey(-1px);
+            ;
+        }
+
+    }
+}
+
+.-u-text-centered {
+    text-align: center;
+    padding: 0 2rem;
+}
