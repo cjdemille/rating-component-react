@@ -13,7 +13,7 @@ export default function Card() {
         return (
             <section className="Card">
                 <div className="Card__icon-holder">
-                    <img src="public/icon-star.svg" alt="star icon" className="Card__icon" />
+                    <img src="https://res.cloudinary.com/denpx8l6a/image/upload/v1704759639/rating-component-react/cqovca5abonh48iau93u.svg" alt="star icon" className="Card__icon" />
                 </div>
                 <h1 className="Card__heading">
                     How did we do?
@@ -35,7 +35,7 @@ export default function Card() {
     } if (submitted) {
         return (
             <section className="Card">
-                <img src="public/illustration-thank-you.svg" alt="" className="Card__img" />
+                <img src="https://res.cloudinary.com/denpx8l6a/image/upload/v1704759639/rating-component-react/jo065z6mzajdqkdzu37s.svg" alt="" className="Card__img" />
                 <div className="Card__rating-submitted">
                     You selected {rating} out of 5
                 </div>
